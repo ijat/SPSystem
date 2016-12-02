@@ -12,12 +12,12 @@ License: GPLv3 (View LICENSE file for more info)
 
 ### Introduction
 
-SPSystem stands for Smart Pigeonhole System. This small piece of software manage notification of pigeon hole for lecturers. Every submission into the pigeon system will alert lecturers accordingly.
+SPSystem stands for Smart Pigeonhole System. This small piece of software can manage notification of pigeonhole for lecturers. Every submission into the pigeonhole will alert lecturers accordingly.
  
 ### Programming Stuffs
 
-* This project folder uses Maven. Initially, it was developed in IntelliJ IDEA but you can compile it using Netbeans of other IDE that support Maven.
+* This project folder uses Maven. Initially, it was developed in IntelliJ IDEA but you can compile it using Netbeans or other IDE that support Maven.
 
-* This software talks to Arduino (Hardaware Part) using serial interface.
+* This software talksg to Arduino (Hardaware Part) using serial interface.
 
 * You must set up your own MySQL server either locally or remotely. As long you have the suitable connectors and know how to do it.
