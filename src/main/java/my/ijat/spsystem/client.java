@@ -1,9 +1,7 @@
-package my.ijat.spsystem.client;
+package my.ijat.spsystem;
 
-public class Main {
-
+public class client {
     public static void main(String[] argz) {
         System.out.println("Test");
     }
-
 }
