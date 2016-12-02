@@ -12,7 +12,7 @@ License: GPLv3 (View LICENSE file for more info)
 
 ### Introduction
 
-SPSystem stands for Smart Pigeon System. This small piece of software manage notification of pigeon hole for lecturers. Every submission into the pigeon system will alert lecturers accordingly.
+SPSystem stands for Smart Pigeonhole System. This small piece of software manage notification of pigeon hole for lecturers. Every submission into the pigeon system will alert lecturers accordingly.
  
 ### Programming Stuffs
 
