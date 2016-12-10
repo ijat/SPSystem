@@ -18,7 +18,6 @@ import java.text.SimpleDateFormat;
 import java.util.Random;
 
 import javafx.stage.WindowEvent;
-import jdk.nashorn.internal.parser.JSONParser;
 import my.ijat.spsystem.data.user_data;
 
 import static spark.Spark.*;
