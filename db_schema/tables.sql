@@ -1,0 +1,12 @@
+USE spsdb_v1;
+CREATE TABLE user_data
+(
+UID int NOT NULL,
+USERNAME varchar(255) NOT NULL,
+FULLNAME text NOT NULL,
+PASS text NOT NULL,
+IR_ID int NOT NULL,
+COUNTER int NOT NULL,
+PIC blob,
+PRIMARY KEY (UID)
+)
