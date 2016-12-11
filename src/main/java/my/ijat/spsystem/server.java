@@ -90,9 +90,9 @@ public class server extends Application {
                     }
                 }
             });
-            addLog("Serial Monitor OK");
+            addLog("Serial Monitor: OK");
         } catch (Exception e) {
-            addLog("Serial Monitor FAIL");
+            addLog("Serial Monitor: FAILED");
         }
     }
 
@@ -120,11 +120,11 @@ public class server extends Application {
                 user_data data = db.read(Integer.valueOf(tUsr), tApiKey);
                 Gson json = new Gson();
 
+                addLog(tUsr + ": USERGET OK");
                 res.type("application/json");
-
                 return json.toJson(data);
             } catch (Exception e) {
-                addLog("User GET failed");
+                addLog(req.ip() + ": USERGET FAILED");
                 res.type("application/json");
                 return "{\"status\":\"FAIL\"}";
             }
@@ -147,10 +147,11 @@ public class server extends Application {
                 MySQL mydb = new MySQL();
                 mydb.write(mydata);
 
+                addLog(tUsr + ": USERADD OK");
                 res.type("application/json");
                 return "{\"status\":\"OK\"}";
             } catch (Exception e) {
-                addLog("User ADD failed");
+                addLog(req.ip() + ": USERADD FAILED");
                 res.type("application/json");
                 return "{\"status\":\"FAIL\"}";
             }
@@ -164,11 +165,13 @@ public class server extends Application {
                 MySQL mydb = new MySQL();
                 user_data mydata = mydb.read(tUsr,tPwd);
                 Gson json = new Gson();
+
+                addLog(tUsr + ": USERLOGIN OK");
                 res.type("application/json");
                 return json.toJson(mydata);
             } catch (Exception e) {
                 e.printStackTrace();
-                addLog("User LOGIN failed");
+                addLog(req.ip() + ": USERLOGIN FAILED");
                 res.type("application/json");
                 return "{\"status\":\"FAIL\"}";
             }
@@ -177,17 +180,11 @@ public class server extends Application {
 
     public void runMain() throws Exception {
         addLog(title + " (" + title_sub + ") v" + version + " by Ijat.my");
-        //for (int i=0;i<200;i++)
         addLog("Starting server...");
 
         // JDBC
         addLog("Initializing JDBC...");
-        //MySQL db = new MySQL();
-        //user_data data = new user_data(1010,"fzr","fak","mypass",123,0);
         try {
-            //db.write(data);
-            //user_data datan = db.read(1);
-            //System.out.print(datan.getFullname());
             addLog("JDBC: OK");
         } catch (Exception e) {
             addLog("JDBC: FAILED - " + e.toString());
